@@ -29,4 +29,9 @@ public class ItemController {
     public List<Item> allItems() {
         return itemRepo.findAll();
     }
+
+    @GetMapping("/findItemByItemID/{itemID}")
+    public List<Item> findEventByActivityID(@PathVariable int itemID ) {
+        return itemRepo.findItemByItemID(itemID);
+    }
 }
